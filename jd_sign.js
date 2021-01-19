@@ -76,7 +76,7 @@ function sendNotificationIfNeed() {
 
   // 去除末尾的换行
   let SCKEY = push_key.replace(/[\r\n]/g,"")
-
+  desp = desp.substring(desp.indexOf("【签到概览】"));
   const options ={
     uri:  `https://sc.ftqq.com/${SCKEY}.send`,
     form: { text, desp },
